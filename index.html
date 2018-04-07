@@ -1,0 +1,154 @@
+<html>
+<link href="bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="responsive.css" rel="stylesheet">
+<script
+		src="https://code.jquery.com/jquery-3.1.1.min.js" 
+		crossorigin="anonymous">
+	</script>
+<div class="buy_function_top_wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="logo_buy_function"> <img src="img/logo_fix.png">
+          <p>You may use this page for any of the transactions you intend to do on LOCKEDiN.io </p>
+          <p>This is a redundant site which may be used in case LOCKEDiN.io Server is down. This will always be up and running and would interact with ETH Blockchain directly to carry out any of the transactions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="buy_and_sell_wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="transition-box buy">
+          <div class="transition-box-inner">
+            <div class="transition_image">
+              <h2>Buy</h2>
+            </div>
+            <div class="transition_title">
+              <p>Unit = Ethereum</p>
+              <p>PS: The higher the gas price you give, the quicker your transaction will be confirmed.</p>
+            </div>
+            <hr>
+            <div class="eth_purchase_box"> <span class="token_value buyPrice">0.0182 eth/token</span>
+              <input type="text" placeholder="0.05">
+              <span class="approx input_label">Type in a number..</span>
+              <button class="transition_submit">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="transition-box sell">
+          <div class="transition-box-inner">
+            <div class="transition_image">
+              <h2>Sell</h2>
+            </div>
+            <div class="transition_title">
+              <p>Unit = LCK Token</p>
+              <p>PS: The higher the gas price you give, the quicker your transaction will be confirmed.</p>
+            </div>
+            <hr>
+            <div class="eth_purchase_box"> <span class="token_value sellPrice">0.0182 eth/token</span>
+              <input type="text" placeholder="0.05">
+              <span class="approx input_label">Type in a number..</span>
+              <button class="transition_submit">Sell</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="holdings">
+  <div class="container">
+    <h2 class="section_title">HOLDINGS</h2>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-sx-12">
+        <div class="holdings_box">
+          <h3>Global</h3>
+          <div class="image_box"> <img src="img/eth.png"> </div>
+          <span id="ethInContract">14370.9770 eth in contract.</span>
+          <div class="image_box"> <img src="img/lkd.png"> </div>
+          <span id="tokensInCirculation">1660161.4 tokens in circulation.</span> </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-sx-12">
+        <div class="holdings_box">
+          <h3>Wallet</h3>
+          <div class="wallet_wrapper">
+            <div class="wallet_box" id="myTokens"> <span>Tokens</span>
+              <p>(LCK)</p>
+              <span class="count">0.0000</span>
+              <p class="converted">(0.00 USDT)</p>
+            </div>
+            <div class="wallet_box no-border" id="myDividends"> <span>Dividends</span>
+              <p>(ETH)</p>
+              <span class="count">0.0000</span>
+              <p class="converted">(0.00 USDT)</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-sx-12">
+        <div class="holdings_box">
+          <h3>Actions</h3>
+         <div class="action-btn-set"> 
+         <button id="reinvest" class="active_btn">Reinvest dividends</button>
+          <button id="withdraw" class="active_btn">Withdraw dividends</button>
+          <a href="https://ropsten.etherscan.io/address/0x29d8d1a36406c71B7ffB69649a15EA567FCF366c" target="_new"  class="active_btn">View Etherscan</a> 
+             </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Transfer_wrapper">
+  <div class="container">
+    <div class="transfer_wrapper_box transfer"> <img src="img/transfer.png">
+      <h2 class="section_title">TRANSFER</h2>
+      <p>Unit = Tokens: Be aware that sending tokens immediately withdraws your dividends so they're not lost!</p>
+      <div class="ui centered grid">
+        <div class="six wide column">
+          <form class="ui form">
+            <div class="field">
+              <input type="text" id="transferAddress" placeholder="Address.." class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="six wide column">
+          <form class="ui form">
+            <div class="field">
+              <input type="text" id="transferTokenCount" placeholder="Tokens.."  class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="column" style="text-align: center;"> <span class="approx">Type in a valid address and token amount..</span> </div>
+        <div class="row">
+          <div class="six wide column">
+            <button class="ui right labeled massive icon button"> <i class="right arrow icon"></i> Transfer </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui active inverted dimmer" id="loadingSpinner">
+  <div class="ui massive text loader" id="loadingText">Connecting with metamask...<br>
+    <noscript>
+    You need to enable JavaScript to run this app.
+    </noscript>
+  </div>
+</div>
+<!--purchase-token-wrapper END--> 
+
+<script src="lib/ls.js"></script> 
+<script src="lib/alertify.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script> 
+<script src="lib/web3.min.js"></script> 
+<script src="lib/buy.js"></script>
+</html>

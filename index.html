@@ -2,10 +2,10 @@
 <link href="bootstrap.min.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 <link href="responsive.css" rel="stylesheet">
-<script
-		src="https://code.jquery.com/jquery-3.1.1.min.js" 
-		crossorigin="anonymous">
-	</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+
+
+
 <div class="buy_function_top_wrapper">
   <div class="container">
     <div class="row">
@@ -18,6 +18,7 @@
     </div>
   </div>
 </div>
+<div class="content_wrapper">
 <div class="container">
  <div class="row">
 		<div class="column masternode hidden" style="text-align: center;">
@@ -45,7 +46,7 @@
               <p>PS: The higher the gas price you give, the quicker your transaction will be confirmed.</p>
             </div>
             <hr>
-            <div class="eth_purchase_box"> <span class="token_value buyPrice">0.0182 eth/token</span>
+            <div class="eth_purchase_box"> <span class="token_value buyPrice">0 eth/token</span>
               <input type="text" placeholder="0.05">
               <span class="approx input_label">Type in a number..</span>
               <button class="transition_submit">Buy</button>
@@ -64,7 +65,7 @@
               <p>PS: The higher the gas price you give, the quicker your transaction will be confirmed.</p>
             </div>
             <hr>
-            <div class="eth_purchase_box"> <span class="token_value sellPrice">0.0182 eth/token</span>
+            <div class="eth_purchase_box"> <span class="token_value sellPrice">0 eth/token</span>
               <input type="text" placeholder="0.05">
               <span class="approx input_label">Type in a number..</span>
               <button class="transition_submit">Sell</button>
@@ -83,9 +84,9 @@
         <div class="holdings_box">
           <h3>Global</h3>
           <div class="image_box"> <img src="img/eth.png"> </div>
-          <span id="ethInContract">14370.9770 eth in contract.</span>
+          <span id="ethInContract">0 eth in contract.</span>
           <div class="image_box"> <img src="img/lkd.png"> </div>
-          <span id="tokensInCirculation">1660161.4 tokens in circulation.</span> </div>
+          <span id="tokensInCirculation">0 tokens in circulation.</span> </div>
       </div>
       <div class="col-md-4 col-sm-4 col-sx-12">
         <div class="holdings_box">
@@ -148,15 +149,32 @@
     </div>
   </div>
 </div>
-<div class="ui active inverted dimmer" id="loadingSpinner">
-  <div class="ui massive text loader" id="loadingText">Connecting with metamask...<br>
-    <noscript>
-    You need to enable JavaScript to run this app.
-    </noscript>
-  </div>
-</div>
 <!--purchase-token-wrapper END--> 
 
+ 	  
+      
+<div class="ui active inverted dimmer" id="loadingSpinner">
+       <div class="ui loader"> 
+           <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+              </div>
+              
+            <div class="ui massive text loader" id="loadingText"><span>Connecting with metamask...</span>
+               <noscript>You need to enable JavaScript to run this app.</noscript>
+            </div>
+        </div>
+</div>
+<!--LOADER END--> 
+ 
+</div>  
 <script src="lib/ls.js"></script> 
 <script src="lib/alertify.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> 
